@@ -1,0 +1,426 @@
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<math.h>
+#include<ctype.h>
+#include<malloc.h>
+#include<stdlib.h>
+void player1(int x,int y,int col,int col1)
+{ int r=18;
+
+  setcolor(col);
+  ellipse(x,y-54,-10,200,r,r-15);
+  line(x-r,y-54,x,y-68);
+  line(x,y-68,x+r,y-54);
+  line(x-19,y-54,x-1,y-68);
+  line(x+1,y-68,x+19,y-54);
+  arc(x,y-56,180,360,r-3);
+  arc(x,y-56,180,360,r-4);
+  line(x,y-39,x,y-33);
+  line(x+1,y-39,x+1,y-33);
+  line(x-1,y-39,x-1,y-33);
+  ellipse(x,y-12,0,360,r-10,r+2);
+  ellipse(x,y-12,0,360,r-11,r+1);
+  ellipse(x,y-12,0,360,r-12,r);
+  line(x-4,y+8,x-5,y+20);
+  line(x-3,y+8,x-4,y+20);
+  line(x+4,y+8,x+5,y+20);
+  line(x+3,y+8,x+4,y+20);
+  arc(x,y-13,90,200,r);
+  arc(x,y-13,90,200,r-1);
+  arc(x,y-13,90,200,r+1);
+  arc(x,y-13,350,90,r);
+  arc(x,y-13,350,90,r-1);
+  arc(x,y-13,350,90,r+1);
+  rectangle(x-5,y-53,x-4,y-52);
+  rectangle(x+5,y-53,x+6,y-52);
+  line(x,y-49,x,y-47);
+  line(x-2,y-44,x+2,y-44);
+  circle(x,y-10,3);
+  circle(x,y-10,2);
+
+  setcolor(col1);
+  line(x+13,y-18,x+28,y-18);      //h
+  line(x+13,y-17,x+28,y-17);         //h
+  circle(x+28,y-15,2);
+  line(x+13,y-16,x+13,y-6);             //v
+  line(x+14,y-16,x+14,y-6);                //v
+  line(x+28,y-12,x+17,y-12);   //H
+  line(x+28,y-11,x+17,y-11);      //H
+  line(x+17,y-11,x+17,y-6); //V
+  line(x+18,y-11,x+18,y-6);    //V
+  line(x+14,y-6,x+18,y-6); //H
+  line(x+14,y-7,x+18,y-7);   //H
+  line(x+13,y-18,x-r,y-18);          //H
+  line(x+13,y-17,x-r,y-17);       //H
+  line(x-r,y-16,x-r,y-6);             //v
+  line(x-r,y-16,x-r,y-6);      //V
+  line(x+13,y-11,x-14,y-11);  //h
+  line(x+13,y-12,x-14,y-12);     //h
+  line(x-14,y-12,x-14,y-6);  //V
+  line(x-13,y-12,x-13,y-6);     //V
+  line(x-r,y-6,x-13,y-6);     //H
+  line(x-r,y-5,x-13,y-5);        //H
+
+}
+
+void player2(int x1, int y1, int col,int col1)
+
+{ int r=18;
+
+  setcolor(col);
+  ellipse(x1,y1-54,-10,200,r,r-15);
+  line(x1-r,y1-54,x1,y1-68);
+  line(x1,y1-68,x1+r,y1-54);
+  line(x1-19,y1-54,x1-1,y1-68);
+  line(x1+1,y1-68,x1+19,y1-54);
+  arc(x1,y1-56,180,360,r-3);
+  arc(x1,y1-56,180,360,r-4);
+  line(x1,y1-39,x1,y1-33);
+  line(x1+1,y1-39,x1+1,y1-33);
+  line(x1-1,y1-39,x1-1,y1-33);
+  ellipse(x1,y1-12,0,360,r-10,r+2);
+  ellipse(x1,y1-12,0,360,r-11,r+1);
+  ellipse(x1,y1-12,0,360,r-12,r);
+  line(x1-4,y1+8,x1-5,y1+20);
+  line(x1-3,y1+8,x1-4,y1+20);
+  line(x1+4,y1+8,x1+5,y1+20);
+  line(x1+3,y1+8,x1+4,y1+20);
+  arc(x1,y1-13,90,200,r);
+  arc(x1,y1-13,90,200,r-1);
+  arc(x1,y1-13,90,200,r+1);
+  arc(x1,y1-13,350,90,r);
+  arc(x1,y1-13,350,90,r-1);
+  arc(x1,y1-13,350,90,r+1);
+  rectangle(x1-5,y1-53,x1-4,y1-52);
+  rectangle(x1+5,y1-53,x1+6,y1-52);
+  line(x1,y1-49,x1,y1-47);
+  line(x1-2,y1-44,x1+2,y1-44);
+  circle(x1,y1-10,3);
+  circle(x1,y1-10,2);
+
+  setcolor(col1);
+  line(x1-13,y1-18,x1-28,y1-18);      //h
+  line(x1-13,y1-17,x1-28,y1-17);         //h
+  circle(x1-28,y1-15,2);
+  line(x1-13,y1-16,x1-13,y1-6);             //v
+  line(x1-14,y1-16,x1-14,y1-6);                //v
+  line(x1-28,y1-12,x1-17,y1-12);   //H
+  line(x1-28,y1-11,x1-17,y1-11);      //H
+  line(x1-17,y1-11,x1-17,y1-6); //V
+  line(x1-18,y1-11,x1-18,y1-6);    //V
+  line(x1-14,y1-6,x1-18,y1-6);
+  line(x1-14,y1-7,x1-18,y1-7);
+  line(x1+13,y1-18,x1-r,y1-18);          //H
+  line(x1+13,y1-17,x1-r,y1-17);       //H
+  line(x1+r,y1-16,x1+r,y1-6);             //v
+  line(x1+r,y1-16,x1+r,y1-6);      //V
+  line(x1+13,y1-11,x1-14,y1-11);  //h
+  line(x1+13,y1-12,x1-14,y1-12);     //h
+  line(x1+14,y1-12,x1+14,y1-6);  //V
+  line(x1+13,y1-12,x1+13,y1-6);     //V
+  line(x1+r,y1-6,x1+13,y1-6);     //H
+  line(x1+r,y1-5,x1+13,y1-5);        //H
+ }
+
+void screen1()
+{ int i,x=60,y=100,x1=580,y1=100,r=18;
+  setcolor(15);
+  setfillstyle(1,15);
+  floodfill(320,240,15);
+  setcolor(5);
+  rectangle(1,1,639,479);
+  rectangle(2,2,638,478);
+  rectangle(3,3,637,477);
+  rectangle(4,4,636,476);
+  setcolor(14);
+  rectangle(5,5,635,475);
+  rectangle(6,6,634,474);
+  rectangle(7,7,633,473);
+  setcolor(5);
+  rectangle(8,8,632,472);
+  rectangle(9,9,631,471);
+  rectangle(10,10,630,470);
+
+
+
+  setcolor(4);
+  settextstyle(0,0,8);
+  outtextxy(120,120,"T");
+  outtextxy(150,200,"T");
+  outtextxy(177,283,"P");
+  setcolor(4);
+  settextstyle(0,0,3);
+  outtextxy(155,154,"HE.....");
+  outtextxy(185,234,"ARGET.....");
+  outtextxy(205,318,"OINT.....");
+
+  setcolor(2);
+  settextstyle(1,0,1);
+  outtextxy(360,390,"PRESENTED BY:-");
+  outtextxy(440,410,"....SHUBHAM SHARMA");
+  player1(60,120,4,1);
+  player2(580,120,5,1);
+  setcolor(4);
+  line(200,105,202,105);
+  line(200,104,202,104);
+  line(400,105,402,105);
+  line(400,104,402,104);
+
+
+}
+
+void playscreen1()
+{  setcolor(15);
+  setfillstyle(1,15);
+  floodfill(320,240,15);
+ setcolor(2);
+ rectangle(1,1,638,478);
+ rectangle(2,2,637,477);
+ setcolor(6);
+ rectangle(80,390,280,477);
+ setfillstyle(4,6);
+ floodfill(180,434,6);
+ rectangle(358,390,558,477);
+ setfillstyle(4,6);
+ floodfill(458,434,6);
+
+
+}
+
+
+void screen2()
+{setcolor(14);
+ rectangle(1,1,20,75);
+ setfillstyle(1,14);
+ floodfill(5,18,14);
+ rectangle(1,1,75,20);
+ setfillstyle(1,14);
+ floodfill(74,5,14);
+
+ rectangle(619,404,639,479);
+ setfillstyle(1,14);
+ floodfill(634,462,14);
+ rectangle(564,459,639,479);
+ setfillstyle(1,14);
+ floodfill(600,470,14);
+
+ setcolor(4);
+ settextstyle(0,0,5);
+ outtextxy(60,50,"INSTRUCTIONS");
+ line(60,97,550,97);
+
+ setcolor(6);
+ settextstyle(1,0,3);
+ outtextxy(40,190,"PLAYER1");
+
+ setcolor(6);
+ settextstyle(1,0,3);
+ outtextxy(400,190,"PLAYER2");
+
+ setcolor(15);
+ settextstyle(1,0,2);
+ outtextxy(20,230,"* Press 'W' to move up");
+ outtextxy(20,260,"* Press 'A' to move left");
+ outtextxy(20,290,"* Press 'S' to move down");
+ outtextxy(20,320,"* Press 'D' to move right");
+ outtextxy(20,350,"* Press 'X' to fire");
+ setcolor(14);
+ line(320,230,320,370);
+ line(319,230,319,370);
+ line(321,230,321,370);
+ setcolor(15);
+ settextstyle(1,0,2);
+ outtextxy(380,230,"* Press 'I' to move up");
+ outtextxy(380,260,"* Press 'J' to move left");
+ outtextxy(380,290,"* Press 'K' to move down");
+ outtextxy(380,320,"* Press 'L' to move right");
+ outtextxy(380,350,"* Press 'M' to fire");
+}
+void transit()
+{int z;
+ for(z=0;z<=639;z++)
+  {setcolor(9);
+   line(z,0,z,120);
+   delay(1);
+
+   setcolor(10);
+   line(z,121,z,240);
+   delay(1);
+
+   setcolor(11);
+   line(z,241,z,360);
+   delay(1);
+
+   setcolor(12);
+   line(z,361,z,479);
+   delay(1);
+
+   }
+}
+void erase()
+{int x;
+ setcolor(0);
+ for(x=0;x<=639;x++)
+  {line(x,0,x,479);
+   delay(2);
+  }         //erasing function
+}
+
+void main()
+{ int gdriver=DETECT,gmode;
+  initgraph(&gdriver,&gmode,"C:\\TurboC3\\BGI");
+  int z,p1size,p2size,p3size;
+  void *p1,*p2,*p3;
+  p1size=imagesize(38,50,92,145);       //image1 of player1
+  p2size=imagesize(548,50,602,145);       //image2 of player2
+  p3size=imagesize(194,101,208,109);    //image of bullet
+
+  p1=malloc(p1size);            //memory allocation of_player1
+  p2=malloc(p2size);          //memory allocation of_player2
+  p3=malloc(p3size);          //memory allocation of_bullet
+
+  screen1();
+  getimage(38,50,92,145,p1);  // image_capturing of_player1
+  getimage(548,50,602,145,p2);  //image_capturing of_player2
+  getimage(194,101,208,109,p3);  //image_capturing of_bullet
+
+  getch();
+ transit();
+ screen2();
+  getch();
+  char ch=' ',ch1,ch2;
+  int j,x=20,y=379,x1=570,y1=379,i,x3=40,y3=479,x4=598,y5=430;
+  int fx1,fy1,fx2,fy2,fire1=0,fire2=0,life1=5,life2=5;
+  erase();
+  playscreen1();
+
+
+  for(i=y3;i>=360;i--)
+ {
+   putimage(x,y,p1,COPY_PUT);       //image pasting of player1
+   putimage(x1,y1,p2,COPY_PUT);        //image pasting of player2
+  setcolor(0);
+  line(x3-37,i,x3+39,i);
+  delay(5);
+  setcolor(0);
+  line(x4-39,i,x4+39,i);
+  delay(5);
+  y--;
+  y1--;
+ }
+
+
+  while(ch!='Q')
+{
+   putimage(x,y,p1,COPY_PUT);
+   putimage(x1,y1,p2,COPY_PUT);
+  if((fire1==1)&&((getpixel(fx1+27,fy1)==15))&&(fx1<=620))  //firing the bullet of player1
+ {
+    putimage(fx1,fy1,p3,COPY_PUT);    //image of player1 in loop
+    fx1=fx1+5;
+      }
+    if((fire1==1)&&(getpixel(fx1+27,fy1)==5))
+   {
+    life2--;
+    fire1=0;
+
+    }
+    gotoxy(75,5);
+    cout<<life2;
+
+    if(life2==0)
+    {erase();
+     gotoxy(40,12);
+     cout<<"GAME OVER...... PLAYER1 wins";
+     getch();
+     exit(0);
+     }
+
+   if((fire2==1)&&((getpixel(fx2-24,fy2)==15))&&(fx2>=10)) //firing the bullet of player2
+   { setcolor(4);
+     putimage(fx2-2,fy2,p3,COPY_PUT);      //image of player2 in loop
+     setcolor(15);
+     line(fx2,fy2,fx2+5,fy2);
+     fx2=fx2-5;
+    }
+
+   if((fire2==1)&&(getpixel(fx2-24,fy2)==4))
+   {
+    life1--;
+    fire2=0;
+    setcolor(15);
+    line(fx2+7,fy2+3,fx2+12,fy2+3);
+    line(fx2+7,fy2+4,fx2+12,fy2+4);
+
+    }
+   gotoxy(3,5);
+   cout<<life1;
+
+
+
+
+
+
+
+    if(life1==0)
+    {erase();
+     gotoxy(40,12);
+     cout<<"GAME OVER...... PLAYER 2 win";
+     getch();
+     exit(0);
+     }
+
+   if(kbhit())
+    {ch=getch();
+     ch=toupper(ch);     //denying the case sensitivness
+     if((ch=='I')||(ch=='J')||(ch=='K')||(ch=='L')||(ch=='M'))
+      ch2=ch; //for player2
+     if((ch=='W')||(ch=='A')||(ch=='S')||(ch=='D')||(ch=='X'))
+      ch1=ch; // for player1
+    }        //movement of both player's at same time
+
+   if(ch1=='W')
+    if(y>=10)
+      y--;
+   if(ch1=='S')
+    if(y<=260)
+      y++;
+   if(ch1=='D')
+    if(x<=270)
+     x++;
+   if(ch1=='A')
+    if(x>=20)
+    x--;
+   if(ch1=='X')
+    {fire1=1;
+     fx1=x+23;
+     fy1=y+54;
+     ch1=' ';
+    }                      //controls of player1
+   if(ch2=='I')
+    if(y1>=10)
+      y1--;
+   if(ch2=='K')
+    if(y1<=260)
+     y1++;
+   if(ch2=='J')
+    if(x1>=320)
+     x1--;
+   if(ch2=='L')
+    if(x1<=570)
+    x1++;
+
+    if(ch2=='M')
+    {fire2=1;
+     fx2=x1-1;
+     fy2=y1+54;
+     ch2=' ';
+    }             //controls of player2
+   }
+  closegraph();
+  getch();
+
+ }
+
